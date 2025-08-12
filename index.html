@@ -3,116 +3,421 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobi – Smart Inventory & Airtime Management</title>
-  <meta name="description" content="Mobi helps informal retailers manage stock, sell airtime, and accept contactless payments with ease." />
-  <meta name="keywords" content="inventory app, airtime sales, contactless payments, mobi, POS, informal traders, stock management South Africa" />
-  <meta name="author" content="Mobi Team" />
+  <title>mobi Suite — Smart POS for African Retailers</title>
+  <meta name="description" content="Transform your shop with modern, affordable POS & inventory software built for African retailers. Start free with your phone." />
+  <meta name="keywords" content="POS system, inventory management, African retailers, South Africa, point of sale, retail software" />
+  <meta name="author" content="mobi Suite" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="mobi Suite — Smart POS for African Retailers" />
+  <meta property="og:description" content="Modern, affordable POS & inventory software built for African retailers." />
+  <meta property="og:image" content="https://mobisuite.co.za/mobi/mobi suite.png" />
+  <meta property="og:url" content="https://mobisuite.co.za" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="mobi Suite — Smart POS for African Retailers" />
+  <meta name="twitter:description" content="Modern, affordable POS & inventory software built for African retailers." />
+  <meta name="twitter:image" content="https://mobisuite.co.za/mobi/mobi suite.png" />
+  <meta name="twitter:url" content="https://mobisuite.co.za" />
+
+
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+    }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    }
 
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
+    
     .fade-in.visible {
       opacity: 1;
-      transform: none;
+      transform: translateY(0);
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #3b82f6, #1e40af);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    .demo-card {
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+
+    .demo-card:hover {
+      border-color: #3b82f6;
+      transform: scale(1.02);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: #3b82f6;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
     }
   </style>
 </head>
-<body class="bg-white text-black">
+<body class="bg-white text-gray-900">
 
   <!-- Header -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">mobi</h1>
-      <nav class="space-x-6 text-sm text-gray-700">
-        <a href="#features" class="hover:text-blue-600">Features</a>
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">m</span>
+          </div>
+          <h1 class="text-2xl font-bold text-blue-600">mobi Suite</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Features</a>
+          <a href="#who" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Who It's For</a>
+          <a href="#demo" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Demo</a>
+          <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-3">
+          <a href="https://wa.me/271322024" class="text-green-600 hover:text-green-700 transition-colors">
+            <span class="text-2xl">💬</span>
+          </a>
+          <button class="md:hidden text-gray-700">
+            <span class="text-2xl">☰</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-b from-blue-50 to-white fade-in">
-    <div class="max-w-2xl mx-auto px-4">
-      <h2 class="text-4xl font-extrabold text-blue-700 mb-4">Smart Inventory & Airtime Management</h2>
-      <p class="text-lg text-gray-700 mb-6">
-        Mobi is a powerful app helping informal retailers manage stock, sell airtime, and accept contactless payments.
-      </p>
-      <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-        Coming Soon
-      </span>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="py-16 bg-white fade-in">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-bold text-center text-gray-800 mb-10">Key Features</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 border rounded shadow-sm">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Smart Inventory</h4>
-          <p class="text-gray-600">Track stock in real-time with barcode scanning and low-stock alerts.</p>
-        </div>
-        <div class="p-6 border rounded shadow-sm">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Airtime Management</h4>
-          <p class="text-gray-600">Sell prepaid airtime & vouchers directly to customers.</p>
-        </div>
-        <div class="p-6 border rounded shadow-sm">
-          <h4 class="text-xl font-semibold text-blue-700 mb-2">Contactless Payments</h4>
-          <p class="text-gray-600">Accept tap-to-pay and QR payments for faster checkout.</p>
+  <section class="gradient-hero text-white py-16 lg:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="fade-in">
+        <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          Transform Your Shop.<br>
+          <span class="text-yellow-300">Take Control.</span><br>
+          Grow Your Business.
+        </h2>
+        <p class="text-xl lg:text-2xl text-blue-100 mb-6 max-w-4xl mx-auto leading-relaxed">
+          Modern, affordable, and easy-to-use POS & inventory software built for local retail realities.
+        </p>
+        <p class="text-lg text-blue-200 mb-8 max-w-3xl mx-auto">
+          Start now with your phone. Upgrade your hardware when you're ready.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg text-white shadow-lg">
+            Get Started Free
+          </button>
+          <button class="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-white text-white hover:bg-white hover:text-blue-600 transition-colors">
+            Book a Demo
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-gray-50 fade-in">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold text-gray-800 mb-4">Built for South African Shops</h3>
-      <p class="text-gray-700">
-        Mobi is currently in development to serve the unique needs of township, informal traders, wholesalers and beyond.
-        Our mission is to empower small businesses with tools once only available to big retailers.
+  <!-- Why mobi Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Why mobi Suite?</h3>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Smartphones are everywhere, but old-fashioned till books and stock sheets still cost small businesses time and profit. 
+        <strong class="text-blue-600">mobi Suite replaces paperwork and manual errors</strong> with a powerful, mobile-first POS you can trust — 
+        with offline access, multi-user controls, and real insights for real growth.
       </p>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white fade-in">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-bold text-gray-800 mb-4">Get In Touch</h3>
-      <p class="text-gray-700 mb-4">Want to learn more or partner with us?</p>
-      <a href="mailto:info@mobiapp.co.za" class="text-blue-600 underline">info@mobiapp.co.za</a>
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 fade-in">
+        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">mobi Suite Features</h3>
+        <p class="text-lg text-gray-600">Everything you need to run your business, all in one place</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">📱</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Run On Any Device</h4>
+          <p class="text-gray-600">Use mobi on your phone, tablet, or desktop — your own existing devices work perfectly.</p>
+        </div>
+
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">📦</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Inventory & Sales In One</h4>
+          <p class="text-gray-600">Real-time stock tracking, barcode scanning, sales, and returns in a single app.</p>
+        </div>
+
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">👥</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Multi-Store, Multi-User Management</h4>
+          <p class="text-gray-600">Open multiple shops? Manage all locations and staff centrally with roles and access controls.</p>
+        </div>
+
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">📶</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Go Offline, Stay In Control</h4>
+          <p class="text-gray-600">No data? No problem. mobi works without internet, syncing automatically when you reconnect.</p>
+        </div>
+
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">💳</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Fast, Flexible Payments</h4>
+          <p class="text-gray-600">Integrate with Yoco, iKhokha, and more for cash, card, and QR payments — your choice, not ours.</p>
+        </div>
+
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">📊</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Secure, Actionable Analytics</h4>
+          <p class="text-gray-600">See your top sellers, slow movers, cash leaks, and staff performance, all at a glance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Is mobi For Section -->
+  <section id="who" class="py-16 bg-blue-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Who Is mobi Suite For?</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+          <div class="text-5xl mb-4">🏪</div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Store Owners</h4>
+          <p class="text-gray-600">Supermarket, tuck shop, spaza, or wholesaler owners</p>
+        </div>
+        
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+          <div class="text-5xl mb-4">🚀</div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">New Entrepreneurs</h4>
+          <p class="text-gray-600">New entrepreneurs or established retailers wanting to modernize</p>
+        </div>
+        
+        <div class="text-center p-6 bg-white rounded-xl shadow-sm">
+          <div class="text-5xl mb-4">🛡️</div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Smart Business Owners</h4>
+          <p class="text-gray-600">Businesses tired of losing money to mistakes, theft, or outdated systems</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes mobi Different Section -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h3 class="text-3xl lg:text-4xl font-bold mb-12">What Makes mobi Suite Different?</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+          <h4 class="text-xl font-semibold mb-3">🚀 Zero Setup Costs</h4>
+          <p class="text-blue-100">Start instantly—use your own devices.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+          <h4 class="text-xl font-semibold mb-3">🌍 Local First</h4>
+          <p class="text-blue-100">Designed in Africa for African businesses and realities.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+          <h4 class="text-xl font-semibold mb-3">📈 Upgrade As You Grow</h4>
+          <p class="text-blue-100">Hardware upgrades coming soon, but you don't need them now.</p>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+          <h4 class="text-xl font-semibold mb-3">🔮 Coming Soon</h4>
+          <p class="text-blue-100">Powerful features and integrations to help retailers thrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">See mobi Suite In Action</h3>
+        <p class="text-lg text-gray-600">Experience the power of modern retail management</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="demo-card p-6 rounded-xl text-center">
+          <div class="text-4xl mb-4">📱</div>
+          <h4 class="font-semibold text-gray-900 mb-2">POS Dashboard</h4>
+          <p class="text-gray-600 text-sm">Clean, intuitive interface for daily operations</p>
+        </div>
+        
+        <div class="demo-card p-6 rounded-xl text-center">
+          <div class="text-4xl mb-4">📦</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Inventory Tracking</h4>
+          <p class="text-gray-600 text-sm">Real-time stock levels and alerts</p>
+        </div>
+        
+        <div class="demo-card p-6 rounded-xl text-center">
+          <div class="text-4xl mb-4">📊</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Sales Reports</h4>
+          <p class="text-gray-600 text-sm">Detailed analytics and insights</p>
+        </div>
+        
+        <div class="demo-card p-6 rounded-xl text-center">
+          <div class="text-4xl mb-4">📷</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Barcode Scanner</h4>
+          <p class="text-gray-600 text-sm">Fast product lookup and inventory updates</p>
+        </div>
+        
+        <div class="demo-card p-6 rounded-xl text-center">
+          <div class="text-4xl mb-4">🏢</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Multi-Store Overview</h4>
+          <p class="text-gray-600 text-sm">Manage multiple locations from one dashboard</p>
+        </div>
+        
+        <div class="demo-card p-6 rounded-xl text-center">
+          <div class="text-4xl mb-4">👨‍💼</div>
+          <h4 class="font-semibold text-gray-900 mb-2">Staff Management</h4>
+          <p class="text-gray-600 text-sm">User roles and performance tracking</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+      <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Ready to take control?</h3>
+      <p class="text-lg text-gray-600 mb-8">We're currently in testing phase. Get early access and help shape the future of African retail.</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a href="https://wa.me/271322024?text=Hi,%20I'd%20like%20to%20request%20a%20demo%20of%20mobi%20Suite" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg text-white shadow-lg inline-block">
+          Request a Demo
+        </a>
+        <a href="mailto:asanda@mobisuite.co.za?subject=mobi%20Suite%20Enquiry" class="px-8 py-4 rounded-lg font-semibold text-lg border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors inline-block">
+          General Enquiry
+        </a>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-600">
+        <div class="flex items-center gap-2">
+          <span>Questions?</span>
+          <a href="https://wa.me/271322024" class="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium">
+            <span>💬</span>
+            WhatsApp Us
+          </a>
+        </div>
+        <span class="hidden sm:block">|</span>
+        <a href="mailto:asanda@mobisuite.co.za" class="text-blue-600 hover:text-blue-700 font-medium">Email Us</a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-<footer class="bg-black text-white text-center py-6">
-    <p>
-      &copy; 2025 mobi.
-      <img src="https://flagcdn.com/w20/za.png" alt="South African Flag" class="inline-block align-middle mx-1" width="20" height="15">
-      Proudly South African
-    </p>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-3 mb-6 md:mb-0">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-sm">m</span>
+          </div>
+          <span class="text-xl font-bold">mobi Suite</span>
+        </div>
+        
+        <div class="flex items-center space-x-6 mb-6 md:mb-0">
+          <span class="text-sm text-gray-400">Follow us:</span>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+          <a href="https://www.instagram.com/mobisuitesa?igsh=b2l3NjJvYW02OTI0" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+        </div>
+        
+        <div class="text-center md:text-right">
+          <p class="text-sm text-gray-400 mb-2">
+            © 2025 mobi Suite. All rights reserved.
+          </p>
+          <div class="flex items-center justify-center md:justify-end gap-2">
+            <img src="https://flagcdn.com/w20/za.png" alt="South African Flag" width="20" height="15">
+            <span class="text-sm text-gray-400">Proudly South African</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Fade-in Animation -->
+  <!-- Scripts -->
   <script>
+    // Fade-in animation on scroll
     document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries, obs) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
       elements.forEach(el => observer.observe(el));
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
   </script>
 </body>
