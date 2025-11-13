@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Mobi Suite</title>
+  <meta name="description" content="Contact Mobi Suite - Smart POS for African Retailers" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+    }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: #3b82f6;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .contact-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-3">
+          <a href="/" class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">m</span>
+            </div>
+            <h1 class="text-2xl font-bold text-blue-600">Mobi Suite</h1>
+          </a>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="/" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+          <a href="/#features" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Features</a>
+          <a href="/#demo" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Demo</a>
+          <a href="/contact.html" class="nav-link text-blue-600 font-medium">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-3">
+          <a href="https://wa.me/27606737507" class="text-green-600 hover:text-green-700 transition-colors">
+            <span class="text-2xl">💬</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-hero text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="fade-in">
+        <h2 class="text-4xl lg:text-5xl font-bold mb-4">Contact Us</h2>
+        <p class="text-xl text-blue-100 mb-2">We're always happy to help!</p>
+        <p class="text-lg text-blue-200">Get in touch with our team</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <main class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Contact Information -->
+        <div class="fade-in">
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+          <p class="text-gray-700 leading-relaxed mb-8">
+            Have questions, feedback, or need assistance with your Mobi account? We're here to help you succeed with your retail business.
+          </p>
+
+          <div class="space-y-6">
+            <!-- Email -->
+            <div class="contact-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <span class="text-2xl text-blue-600">📧</span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">Email Us</h4>
+                  <p class="text-gray-600 mb-2">For general inquiries and support</p>
+                  <a href="mailto:asanda@mobisuite.co.za" class="text-blue-600 hover:text-blue-700 font-medium">
+                    support@mobisuite.co.za
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-card bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                  <span class="text-2xl text-green-600">💬</span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h4>
+                  <p class="text-gray-600 mb-2">Quick questions and instant support</p>
+                  <a href="https://wa.me/27606737507" class="text-green-600 hover:text-green-700 font-medium">
+                    +27 60 673 7507
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="fade-in">
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">Quick Actions</h3>
+          
+          <div class="space-y-4">
+            <a href="https://wa.me/27606737507?text=Hi,%20I'd%20like%20to%20request%20a%20demo%20of%20mobi%20Suite" 
+               class="w-full btn-primary px-6 py-4 rounded-lg font-semibold text-white text-center block">
+              Request a Demo
+            </a>
+            
+            <a href="mailto:asanda@mobisuite.co.za?subject=Technical%20Support%20Request" 
+               class="w-full px-6 py-4 rounded-lg font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-colors text-center block">
+              Technical Support
+            </a>
+            
+          </div>
+
+          <!-- Additional Info -->
+          <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
+            <h4 class="text-lg font-semibold text-gray-900 mb-3">Need Help in the App?</h4>
+            <p class="text-gray-700 mb-4">
+              You can also reach us directly through the app under <strong>Settings → Contact Support</strong>.
+            </p>
+            <p class="text-gray-600 text-sm">
+              We typically respond to all inquiries within 24 hours during business days.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center space-x-3 mb-6 md:mb-0">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-sm">m</span>
+          </div>
+          <span class="text-xl font-bold">Mobi Suite</span>
+        </div>
+        
+        <div class="flex items-center space-x-6 mb-6 md:mb-0">
+          <a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+          <a href="/terms-of-service.html" class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+          <a href="/contact.html" class="text-gray-400 hover:text-white transition-colors text-sm">Contact Us</a>
+        </div>
+        
+        <div class="text-center md:text-right">
+          <p class="text-sm text-gray-400 mb-2">
+            © 2025 Mobi Suite. All rights reserved.
+          </p>
+          <div class="flex items-center justify-center md:justify-end gap-2">
+            <img src="https://flagcdn.com/w20/za.png" alt="South African Flag" width="20" height="15">
+            <span class="text-sm text-gray-400">Proudly South African</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Fade-in animation on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
