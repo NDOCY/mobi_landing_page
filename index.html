@@ -108,6 +108,18 @@
     .nav-link:hover::after {
       width: 100%;
     }
+
+    /* Add to your existing CSS */
+    .zapper-logo-wrapper {
+      padding: 1em; /* 1X spacing as per brand guide */
+      display: inline-block;
+      background: white; /* Ensure proper contrast */
+    }
+
+    .zapper-logo {
+      height: 40px; /* Minimum recommended size for mobile */
+      object-fit: contain;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -117,9 +129,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-4">
         <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+          <!--<div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
             <span class="text-white font-bold text-lg">m</span>
-          </div>
+          </div>-->
           <h1 class="text-2xl font-bold text-blue-600">Mobi Suite</h1>
         </div>
         <nav class="hidden md:flex space-x-8">
@@ -181,6 +193,119 @@
     </div>
   </section>
 
+  <!-- What's New in Mobi v2.5 Section -->
+  <section class="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center justify-center mb-4">
+          <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 border border-blue-200">
+            🚀 New Release
+          </span>
+        </div>
+        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What's New in Mobi v2.5</h3>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Powerful new features to help you run your business better</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Bluetooth Printer Card -->
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-start mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mr-4">
+              <span class="text-white text-2xl">🖨️</span>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-900">Bluetooth Thermal Printer Support</h4>
+              <div class="inline-flex items-center mt-1">
+                <span class="text-xs font-medium px-2 py-1 rounded bg-blue-100 text-blue-800">NEW</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Print receipts directly via Bluetooth to any 58mm ESC/POS portable printer (including generic models). No vendor lock-in.
+          </p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span>
+              Compatible with most 58mm thermal printers
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span>
+              Works with generic/affordable printer models
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-2">✓</span>
+              Portable & battery-powered options supported
+            </li>
+          </ul>
+        </div>
+
+        <!-- Integrated Payments Card -->
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+          <div class="flex items-start mb-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mr-4">
+              <span class="text-white text-2xl">💳</span>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-900">Integrated QR Payments</h4>
+              <div class="inline-flex items-center mt-1">
+                <span class="text-xs font-medium px-2 py-1 rounded bg-green-100 text-green-800">NEW</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-4">
+            Accept secure QR payments instantly with Zapper — directly inside the Mobi app.
+          </p>
+          <!-- Zapper Branding Section -->
+          <div class="mt-4 pt-4 border-t border-gray-100">
+            <div class="flex items-center justify-between">
+              <div>
+                <!--<p class="text-sm font-medium text-gray-700 mb-1">Powered by</p>-->
+                <!-- Zapper Logo Placeholder - Replace with actual Zapper logo from brand guide -->
+                <div class="flex items-center space-x-2">
+                  <!-- Replace the ZAPPER text placeholder with this actual logo implementation -->
+                  <div class="zapper-logo-wrapper">
+                    <img 
+                      src="mobi/Zapper_Logo_Dark_Blue.png" 
+                      alt="Zapper" 
+                      class="zapper-logo"
+                      style="height: 40px; width: auto;"
+                    >
+                    <p class="text-xs text-gray-500 mt-1">
+                      Mobi Suite is an authorized Zapper reseller, enabling merchants to receive secure QR payments directly through Mobi.
+                    </p>
+                  </div>
+                  <!--<span class="text-xs text-gray-500 font-medium">Authorized Reseller</span>-->
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                  Authorized Reseller
+                </span>
+              </div>
+            </div>
+            <!--<p class="text-xs text-gray-500 mt-3">
+              Mobi Suite is an authorized Zapper affiliate reseller, enabling seamless setup for merchants.
+            </p>-->
+            <p class="text-sm text-gray-600 mt-3">
+              Don’t have a Zapper merchant account yet? 
+              <a href="https://www.zapper.com/pricing/?referrer=Mobisuite" 
+                class="text-blue-600 font-medium hover:underline">
+                Sign up using our affiliate link.
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <p class="text-sm text-gray-500">
+          🔄 All existing Mobi Suite users will receive these features automatically in their next app update.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
   <section id="features" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,8 +341,57 @@
 
         <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
           <div class="feature-icon">💳</div>
-          <h4 class="text-xl font-semibold text-gray-900 mb-3">Fast, Flexible Payments</h4>
-          <p class="text-gray-600">Coming Soon.</p>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Integrated QR Payments</h4>
+          <p class="text-gray-600 mb-3">
+            Accept Zapper payments directly from the app. Instant QR codes, instant confirmations.
+          </p>
+          <!-- Zapper branding for feature card -->
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <div class="flex items-center justify-between">
+              <!--<div class="text-sm text-gray-500">Powered by</div>-->
+              <!-- Zapper mini logo - Replace with actual logo from brand guide -->
+              <!-- Replace the ZAPPER text placeholder with this actual logo implementation -->
+              <div class="zapper-logo-wrapper">
+                <img 
+                  src="mobi/Zapper_Logo_Dark_Blue.png" 
+                  alt="Zapper" 
+                  class="zapper-logo"
+                  style="height: 40px; width: auto;"
+                >
+                <!--<p class="text-xs text-gray-500 mt-1">
+                  Mobi Suite is an authorized Zapper reseller, enabling merchants to receive secure QR payments directly through Mobi.
+                </p>-->
+
+                <p class="text-sm text-gray-600 mt-3">
+                  Don’t have a Zapper merchant account yet? 
+                  <a href="https://www.zapper.com/pricing/?referrer=Mobisuite" 
+                    class="text-blue-600 font-medium hover:underline">
+                    Sign up using our affiliate link.
+                  </a>
+                </p>
+
+              </div>
+            </div>
+            <div class="mt-2">
+              <span class="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded font-medium">
+                Authorized Reseller
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
+          <div class="feature-icon">🖨️</div>
+          <h4 class="text-xl font-semibold text-gray-900 mb-3">Receipt Printing</h4>
+          <p class="text-gray-600">
+            Print receipts via Bluetooth on any 58mm ESC/POS printer. Fast, portable, and hardware-agnostic.
+          </p>
+          <div class="mt-3">
+            <span class="inline-flex items-center text-sm text-gray-500">
+              <span class="mr-1">📱</span>
+              Works with portable Bluetooth printers
+            </span>
+          </div>
         </div>
 
         <div class="card-hover bg-white p-8 rounded-xl shadow-sm border border-gray-100 fade-in">
@@ -280,8 +454,8 @@
         </div>
         
         <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-          <h4 class="text-xl font-semibold mb-3">🔮 Coming Soon</h4>
-          <p class="text-blue-100">Powerful features and integrations to help retailers thrive.</p>
+          <h4 class="text-xl font-semibold mb-3">🎯 Built for Real Retail</h4>
+          <p class="text-blue-100">Now with Bluetooth receipt printing & integrated Zapper payments.</p>
         </div>
       </div>
     </div>
